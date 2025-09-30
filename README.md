@@ -30,12 +30,11 @@ php artisan key:generate
 # Tạo database trống rồi chỉnh các biến DB_* trong .env
 php artisan migrate --seed
 php artisan serve               # chạy ở http://127.0.0.1:8000
+```
 Lưu ý: API dùng Sanctum. Nếu gọi từ Android emulator, Flutter nên trỏ tới http://10.0.2.2:8000.
 
 .env.example mẫu (nếu thiếu):
-
-dotenv
-Sao chép mã
+```
 APP_NAME=LopFund
 APP_ENV=local
 APP_KEY=
@@ -60,8 +59,10 @@ SESSION_DRIVER=file
 SESSION_LIFETIME=120
 
 SANCTUM_STATEFUL_DOMAINS=localhost,127.0.0.1
+```
 2) Frontend (Flutter)
-bash
+
+```bash
 Sao chép mã
 cd quylop
 flutter pub get
@@ -69,15 +70,11 @@ flutter pub get
 # const API_BASE_URL = 'http://10.0.2.2:8000';
 flutter run
 Ghi chú base URL:
-
 Máy thật & API cùng LAN: dùng IP máy chạy API, ví dụ http://192.168.1.10:8000.
-
 Android Emulator: dùng http://10.0.2.2:8000.
-
-iOS Simulator: có thể dùng http://127.0.0.1:8000.
-
+```
 3) Expose API ra ngoài (tùy chọn, ngrok)
-bash
+```
 Sao chép mã
 ngrok http 8000
 Lấy URL ngrok (ví dụ https://abcd-xyz.ngrok-free.app) gán vào API_BASE_URL của app.
@@ -90,22 +87,22 @@ lopfund-api/app/Http/Controllers – Controllers.
 quylop/lib/ – mã nguồn Flutter.
 
 quylop/lib/services – cấu hình Dio, session, env…
-
+```
 Lệnh nhanh
 Laravel
 
-bash
+```bash
 Sao chép mã
 php artisan migrate:fresh --seed
 php artisan serve
 Flutter
-
-bash
+```
+```bash
 Sao chép mã
 flutter clean
 flutter pub get
 flutter run
 Đóng góp
 Tạo nhánh từ main, mở Pull Request.
-
+```
 Đừng commit file bí mật: lopfund-api/.env, file build, thư mục vendor/, build/, ios/Pods/ (đã ignore).
