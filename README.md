@@ -59,7 +59,6 @@ SANCTUM_STATEFUL_DOMAINS=localhost,127.0.0.1
 2) Frontend (Flutter)
 
 ```bash
-Sao chép mã
 cd quylop
 flutter pub get
 # Sửa file cấu hình base URL (lib/services/env.dart hoặc tương đương) thành:
@@ -71,7 +70,6 @@ Android Emulator: dùng http://10.0.2.2:8000.
 ```
 3) Expose API ra ngoài (tùy chọn, ngrok)
 ```
-Sao chép mã
 ngrok http 8000
 Lấy URL ngrok (ví dụ https://abcd-xyz.ngrok-free.app) gán vào API_BASE_URL của app.
 
@@ -88,13 +86,11 @@ Lệnh nhanh
 Laravel
 
 ```bash
-Sao chép mã
 php artisan migrate:fresh --seed
 php artisan serve
 Flutter
 ```
 ```bash
-Sao chép mã
 flutter clean
 flutter pub get
 flutter run
