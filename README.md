@@ -4,12 +4,8 @@ Monorepo chứa cả **API (Laravel)** và **App (Flutter)**.
 
 ## Cấu trúc
 Lop_Fund/
-├─ quylop/ # Flutter app
-└─ lopfund-api/ # Laravel API
-
-yaml
-Sao chép mã
-
+-  ├─ quylop/ # Flutter app
+-  └─ lopfund-api/ # Laravel API
 ---
 
 ## Yêu cầu
